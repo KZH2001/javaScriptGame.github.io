@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+
+  <!-- start login box -->
+  <div class="container">
+    <div class="mainCard">
+
+      <!-- start login information -->
+      <div class="description">
+        <div class="info">
+          <h3 class="ruleTitle">The rule of username</h3>
+          <div class="rule-box">
+            <div class="rule rule1">Don't allow Capital Letter</div>
+            <div class="rule rule2">Don't allow Special Character</div>
+            <div class="rule rule3">Don't allow Space</div>
+            <div class="rule rule4">Word count limit - 13</div>
+          </div><br>
+          <h3 class="passTitle">How to get Password?</h3>
+          <div class="password-guide">
+            <div class="pass1">There is a password</div>
+            <div class="pass2">but you can't see it</div>
+            <div class="pass3">You need to know that.</div>
+            <div class="pass4">Don't forget to check corner</div>
+            <div class="pass5">Password contains 5 words</div>
+          </div>
+        </div>
+      </div>
+      <!-- end login information -->
+
+<!-- start input form  -->
+      <div class="login-card">
+        <div class="card-header">
+          <div id="login" class="log">Login</div>
+        </div>
+        <form name="formName">
+          <div class="form-group">
+            <input placeholder="Enter Your Name" id="name" type="text" maxlength="13">
+            <small id="errorMessageName"></small>
+          </div>
+          <div class="form-group">
+            <input placeholder="Password" name="password" id="pass" type="password">
+            <small id="errorMessagePassword"></small>
+          </div>
+          <div class="form-group">
+            <input id="submit-btn" value="Login" class="submitBtn">
+          </div>
+        </form>
+        <div class="check3"></div>
+        <div class="password password3">h</div>
+        <div class="cover3 cover">
+          <div class="number3">III</div>
+        </div>
+      </div>
+      <!-- end input form -->
+
+    </div>
+  </div>
+<!-- end login box -->
+
+  <!-- start animation -->
+  <div class="animation">
+    <div id="machineContainer">
+      <div class="machine">
+        <div class="left">
+          <img id="left" src="./images/Login/left.png" alt="">
+        </div>
+        <div class="right">
+          <img src="./images/Login/right.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="check1"></div>
+    <div class="password password1">xt</div>
+    <div class="cover1 cover">
+      <div class="number1">I</div>
+    </div>
+    <div class="check2"></div>
+    <div class="password password2">ec</div>
+    <div class="cover2 cover">
+      <div class="number2">II</div>
+    </div>
+  </div>
+  <!-- end animation -->
+
+  <!-- start audio -->
+  <audio controls loop id="audio">
+    <source src="audio/bgSound.mp3" type="audio/mpeg">
+  </audio>
+  <!-- end audio -->
+</body>
+
+<script src="./js/loginBtn.js"></script>
+</html>

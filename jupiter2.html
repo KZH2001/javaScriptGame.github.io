@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/Introduction/jupiter.png">
+    <link rel="stylesheet" href="./css/jupiter2.css">
+    <title>Jupiter</title>
+</head>
+
+<body>
+
+    <!-- start main screnn -->
+    <div class="container">
+        <div id="machineClick">Click Modern Machine</div>
+        <div class="dynamic-container">
+            <span class="dynamic dynamic-text"> </span>
+        </div>
+
+        <!-- start animation image -->
+        <div class="animation">
+            <div class="rocekt">
+                <img id="rocket-hide" class="rocket-img" src="./images/Jupiter/rocket.png" alt="">
+            </div>
+            <div class="jupter">
+                <img id="jupiter-hide" class="jupter-img" src="./images/Jupiter/jupiter.svg" alt="">
+            </div>
+            <div class="ufo">
+                <img id="ufo-hide" class="ufo-img" src="./images/Jupiter/ufo.png" alt="">
+            </div>
+            <div class="alien">
+                <img class="alien-img" src="./images/Jupiter/aliens.gif" alt="">
+            </div>
+            <div class="advancedMachine">
+                <img onclick="setTimeout(loginForm,3000)" id="machine" src="./images/Jupiter/machine.png" alt="">
+            </div>
+        </div>
+        <!-- end animation image -->
+    </div>
+    <!-- end main screen -->
+
+
+    <!-- start audio -->
+    <!-- strange sound -->
+    <audio id="strangeAudio">
+        <source src="./audio/ufo-landing.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- alien voice -->
+    <audio id="alienVoice">
+        <source src="./audio/alienVoice.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- background sound -->
+    <audio controls loop autoplay id="audio">
+        <source src="audio/bgSound.mp3" type="audio/mpeg">
+    </audio>
+    <!-- end audio -->
+</body>
+<script src="./js/jupiter2.js"></script>
+
+</html>

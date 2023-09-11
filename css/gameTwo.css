@@ -1,0 +1,634 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/Introduction/galaxy.gif);
+  font-family: "Russo One", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+#audio {
+  display: none;
+}
+
+#playerName {
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 30px;
+  opacity: 0;
+  animation: showText linear 1s .5s forwards;
+  margin-top: 25px;
+}
+
+.helpRobot img {
+  width: 80px;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  opacity: 0;
+  animation: beat 1s linear infinite, showText linear 2s 1.5s forwards;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(235, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.guide-container {
+  opacity: 0.;
+  position: relative;
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-container::before {
+  content: "";
+  background-image: url(../images/GameOne/mars.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.box {
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+  width: 70px;
+  color: white;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .5s linear;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box:hover {
+  transform: scale(1.6);
+  color: rgb(14, 152, 165);
+  position: relative;
+}
+
+#heart {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  font-size: 20px;
+  animation: showText linear 2s 1s forwards;
+  opacity: 0;
+}
+
+.header {
+  color: rgb(38, 61, 194);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.life {
+  font-size: larger;
+  width: 30px;
+  height: 30px;
+  color: red;
+}
+
+.ques-box,
+.ans-box {
+  width: 260px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  line-height: 35px;
+  border-radius: 7px;
+  border: 1px solid white;
+}
+
+.ans {
+  display: block;
+}
+
+.answerBox {
+  margin-left: 20px;
+}
+
+.quizBody {
+  margin-top: 100px;
+  opacity: 1;
+}
+
+.timeBox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  animation: showText linear 2s 1.2s forwards;
+  opacity: 0;
+}
+
+#time,
+.timer {
+  color: white;
+  height: 30px;
+  margin: 10px;
+}
+
+.gameStart {
+  display: flex;
+  justify-content: center;
+}
+
+#start,
+#next {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 60px;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#correct {
+  display: none;
+}
+
+.result-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 19.3px;
+  background-color: #2c2c54;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+
+.gameOneQuestionOne {
+  opacity: 0;
+  animation: showQuestion 2s 3s linear forwards;
+}
+
+.gameOneAnswerOne {
+  opacity: 0;
+  animation: showAnswer 2s 3s linear forwards;
+}
+
+.gameOneQuestionTwo {
+  opacity: 0;
+  animation: showQuestion 2s 4s linear forwards;
+}
+
+.gameOneAnswerTwo {
+  opacity: 0;
+  animation: showAnswer 2s 4s linear forwards;
+}
+
+.gameOneQuestionThree {
+  opacity: 0;
+  animation: showQuestion 2s 5s linear forwards;
+}
+
+.gameOneAnswerThree {
+  opacity: 0;
+  animation: showAnswer 2s 5s linear forwards;
+}
+
+.resultOne {
+  opacity: 0;
+  animation: showText 2s 6s linear forwards;
+}
+
+.resultTwo {
+  opacity: 0;
+  animation: showText 2s 7s linear forwards;
+}
+
+.resultThree {
+  opacity: 0;
+  animation: showText 2s 8s linear forwards;
+}
+
+.gameStart {
+  display: none;
+  text-align: center;
+}
+
+.firstRow {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.secondRow {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pigBoxOne {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.pigBoxTwo {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.pigBoxThree {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.pigBoxFour {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.vertical {
+  width: 8px;
+  height: 180px;
+  background-color: #c04f1b;
+  border: .3px solid black;
+  position: absolute;
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.horizonal {
+  width: 180px;
+  height: 8px;
+  background-color: #c04f1b;
+  border: .3px solid black;
+  position: absolute;
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.pigBoxThree .diagonalOne {
+  width: 8px;
+  height: 200px;
+  background-color: #c04f1b;
+  position: absolute;
+  transform: rotate(45deg) translate(38px, -88px);
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.pigBoxThree .diagonalTwo {
+  width: 8px;
+  height: 200px;
+  background-color: #c04f1b;
+  position: absolute;
+  transform: rotate(135deg) translate(-88px, -38px);
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.pigBoxFour .diagonalOne {
+  width: 8px;
+  height: 200px;
+  background-color: #c04f1b;
+  position: absolute;
+  transform: rotate(45deg) translate(38px, -88px);
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.pigBoxFour .diagonalTwo {
+  width: 8px;
+  height: 200px;
+  background-color: #c04f1b;
+  position: absolute;
+  transform: rotate(135deg) translate(-88px, -38px);
+  box-shadow: 2px 2.5px 2.5px rgba(0, 0, 0, 0.6);
+}
+
+.pigPenOne {
+  left: 60px;
+}
+
+.alph {
+  position: absolute;
+  font-weight: bolder;
+  font-size: 45px;
+  color: #fc7a1086;
+  font-family: 'Russo One', sans-serif;
+  text-shadow: 2px 1.5px 3.5px rgba(0, 0, 0, 0.45);
+  transition: .2s;
+}
+
+.alph:hover {
+  color: #fc7a10;
+  cursor: pointer;
+}
+
+#a,
+#j {
+  right: 18px;
+}
+
+#d,
+#m {
+  right: 18px;
+  top: 64px;
+  z-index: 100;
+}
+
+#g,
+#p {
+  right: 18px;
+  bottom: 0;
+}
+
+#b {
+  left: 15px;
+}
+
+#k {
+  left: 14px;
+}
+
+#e {
+  left: 15px;
+  top: 64px;
+}
+
+#n {
+  left: 14px;
+  top: 64px;
+}
+
+#h,
+#q {
+  left: 15px;
+  bottom: 0;
+}
+
+#c,
+#l {
+  left: 72px;
+}
+
+#f,
+#o {
+  left: 72px;
+  top: 64px;
+}
+
+#i,
+#r {
+  left: 72px;
+  bottom: 0;
+}
+
+#s,
+#w {
+  position: absolute;
+  right: 12px;
+  rotate: -46deg;
+  top: 45px;
+}
+
+#t,
+#x {
+  position: absolute;
+  right: 15px;
+  rotate: -44deg;
+  top: 102px;
+}
+
+#u,
+#y {
+  position: absolute;
+  top: 42px;
+  right: -45px;
+  rotate: -45deg;
+}
+
+#v,
+#z {
+  position: absolute;
+  rotate: -45deg;
+  right: -44px;
+  top: 100px;
+}
+
+.pigPenTwo {
+  right: 60px;
+}
+
+.pigPenThree {
+  top: 60px;
+}
+
+.pigPenFour {
+  bottom: 60px;
+}
+
+.circle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #d17c0d;
+  border: 1px solid black;
+}
+
+.circle1 {
+  right: 12px;
+  top: 40px;
+}
+
+.circle2 {
+  right: 12px;
+  top: 82px;
+  z-index: 200;
+}
+
+.circle3 {
+  right: 12px;
+  top: 122px;
+}
+
+.circle4 {
+  top: 40px;
+  left: 20px;
+}
+
+.circle5 {
+  top: 82px;
+  left: 20px;
+}
+
+.circle6 {
+  top: 122px;
+  z-index: 100;
+  left: 20px;
+}
+
+.circle7 {
+  left: 62px;
+  top: 40px;
+}
+
+.circle8 {
+  left: 62px;
+  top: 82px;
+}
+
+.circle9 {
+  left: 62px;
+  top: 122px;
+}
+
+.circle10 {
+  left: 10px;
+  top: 76px;
+}
+
+.circle11 {
+  left: 10px;
+  top: 105px;
+  z-index: 200;
+}
+
+.circle12 {
+  left: -20px;
+  top: 77px;
+}
+
+.circle13 {
+  left: -20px;
+  top: 105px;
+}
+
+#restart {
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 80vh;
+}
+
+
+@keyframes showQuestion {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAnswer {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hideText {
+  from {
+    border-left: 2px solid white;
+  }
+
+  to {
+    border-left: 0px solid white;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

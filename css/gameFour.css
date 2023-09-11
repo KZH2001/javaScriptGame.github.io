@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(../images/Introduction/galaxy.gif);
+  font-family: "Russo One", sans-serif;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+}
+#audio {
+  display: none;
+}
+
+#playerName {
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 30px;
+  opacity: 0;
+  animation: showText linear 1s .5s forwards;
+  margin-top: 25px;
+}
+
+.helpRobot img {
+  width: 80px;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  opacity: 0;
+  animation: beat 1s linear infinite, showText linear 2s 1.5s forwards;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: -80px;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 65%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(235, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.guide-container {
+  opacity: 0.;
+  position: relative;
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-container::before {
+  content: "";
+  background-image: url(../images/GameOne/uranus.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.box {
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+  width: 70px;
+  color: white;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .5s linear;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box:hover {
+  transform: scale(1.6);
+  color: rgb(14, 152, 165);
+  position: relative;
+}
+
+.game4Box {
+  width: 700px;
+  margin: auto;
+  overflow: wrap;
+  position: absolute;
+  height: 480px;
+  line-height: 25px;
+}
+
+.textDescription {
+  color: white;
+}
+
+#point {
+  color: rgb(17, 202, 226);
+}
+
+.textOne {
+  width: 100px;
+  color: white;
+}
+
+.textTwo {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.mainSample {
+  margin-top: 30px;
+  width: 700px;
+  height: 220px;
+  justify-content: space-between;
+  display: flex;
+}
+
+.notePad {
+  width: 330px;
+  height: 100px;
+  margin: auto;
+  margin-top: 20px;
+  opacity: 0;
+  animation: showText 2s 10s linear forwards;
+}
+
+#noteDown {
+  background-color: #2c2c54;
+  color: rgb(17, 202, 226);
+  border: 1px solid white;
+  resize: none;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 200px;
+}
+
+textarea {
+  font-size: 18px;
+}
+
+.left {
+  width: 300px;
+}
+
+.right {
+  width: 300px;
+}
+
+#heart {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  font-size: 20px;
+  animation: showText linear 2s 1s forwards;
+  opacity: 0;
+}
+
+.header {
+  color: rgb(38, 61, 194);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.life {
+  font-size: larger;
+  width: 30px;
+  height: 30px;
+  color: red;
+}
+
+.ques-box,
+.ans-box,
+.key-box {
+  width: 260px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  line-height: 35px;
+  border-radius: 7px;
+  border: 1px solid white;
+}
+
+.key-box {
+  background-color: #2c2c54;
+}
+
+.ans {
+  display: block;
+}
+
+.answerBox {
+  margin-left: 20px;
+}
+
+.keyBox {
+  margin-right: 20px;
+  opacity: 0;
+}
+.quizBody {
+  margin-top: 100px;
+  opacity: 1;
+}
+
+.timeBox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  animation: showText linear 2s 1.2s forwards;
+  opacity: 0;
+}
+
+#time,
+.timer {
+  color: white;
+  height: 30px;
+  margin: 10px;
+}
+
+.gameStart {
+  display: flex;
+  justify-content: center;
+}
+
+#start,
+#next {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 60px;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#correct {
+  display: none;
+}
+
+.result-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 19.3px;
+  background-color: #2c2c54;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+
+.gameOneQuestionOne {
+  opacity: 0;
+  animation: showText 1s 1.1s linear forwards;
+}
+.gameOneQuestionTwo {
+  opacity: 0;
+  animation: showText 1s 1.7s linear forwards;
+}
+
+.gameOneQuestionThree {
+  opacity: 0;
+  animation: showText 1s 2.3s linear forwards;
+}
+.keyBoxOne {
+  opacity: 0;
+  animation: showKey 2s 3s linear forwards;
+}
+
+.gameOneAnswerOne {
+  opacity: 0;
+  animation: showAnswer 2s 3s linear forwards;
+}
+
+.keyBoxTwo {
+  opacity: 0;
+  animation: showKey 2s 4s linear forwards;
+}
+.gameOneAnswerTwo {
+  opacity: 0;
+  animation: showAnswer 2s 4s linear forwards;
+}
+
+.keyBoxThree {
+  opacity: 0;
+  animation: showKey 2s 5s linear forwards;
+}
+.gameOneAnswerThree {
+  opacity: 0;
+  animation: showAnswer 2s 5s linear forwards;
+}
+.resultOne {
+  opacity: 0;
+  animation: showText 2s 6s linear forwards;
+}
+
+.resultTwo {
+  opacity: 0;
+  animation: showText 2s 7s linear forwards;
+}
+
+.resultThree {
+  opacity: 0;
+  animation: showText 2s 8s linear forwards;
+}
+.gameStart {
+  opacity: 0;
+  animation: showText 2s 9s linear forwards;
+}
+
+#restart {
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 80vh;
+}
+@keyframes showKey {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAnswer {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hideText {
+  from {
+    border-left: 2px solid white;
+  }
+  to {
+    border-left: 0px solid white;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+

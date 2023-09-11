@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="./css/gameThree.css" />
+	<link rel="stylesheet" href="./css/gameOverAnimation.css">
+
+	<title>Level 3</title>
+</head>
+
+<body onload="boxStyles()">
+
+	<h1 id="playerName"></h1>
+	<div id="heart"></div>
+
+	<div id="myBtn" class="helpRobot">
+		<img src="./images/GameOne/robot.png" alt="" />
+	</div>
+
+	<!-- start modal -->
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="guide-container">
+
+				<div class="game3Container">
+					<div class="alphaBox">
+						<span id="gD">D</span>
+						<div>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+						</div>
+						<span id="gA">A</span>
+					</div>
+
+					<div class="alphaBox1">
+						<span id="gD">A</span>
+						<div>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<span id="gA">X</span>
+					</div>
+
+					<div class="alphaBox2">
+						<span id="gD">P</span>
+						<div>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+						</div>
+						<span id="gA">M</span>
+					</div>
+
+					<div class="alphaBox3">
+						<span id="gD">M</span>
+						<div>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+						</div>
+						<span id="gA">J</span>
+					</div>
+
+					<div class="alphaBox4">
+						<span id="gD">R</span>
+						<div>
+							<div class="arrow">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+						</div>
+						<span id="gA">O</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modal -->
+
+	<div id="levelOne" class="level">
+
+		<!-- start quiz and answer -->
+		<div class="quizBody">
+
+			<!-- Start Quiz & Answer 1 -->
+			<div class="header">
+				<div class="questionBox gameOneQuestionOne">
+					<label for="">Question</label>
+					<div class="ques ques-box"></div>
+				</div>
+				<div class="answerBox gameOneAnswerOne">
+					<label for="">Answer</label>
+					<input type="text" class="ans ans-box" />
+				</div>
+				<div class="result result-box resultOne"></div>
+			</div>
+			<!-- End Quiz & Answer 1 -->
+
+			<!-- Start Quiz & Answer 2 -->
+			<div class="header">
+				<div class="questionBox gameOneQuestionTwo">
+					<label for="">Question</label>
+					<div class="ques ques-box"></div>
+				</div>
+				<div class="answerBox gameOneAnswerTwo">
+					<label for="">Answer</label>
+					<input type="text" class="ans ans-box" />
+				</div>
+				<div class="result result-box resultTwo"></div>
+			</div>
+			<!-- End Quiz & Answer 2 -->
+
+			<!-- Start Quiz & Answer 3 -->
+			<div class="header">
+				<div class="questionBox gameOneQuestionThree">
+					<label for="">Question</label>
+					<div class="ques ques-box"></div>
+				</div>
+				<div class="answerBox gameOneAnswerThree">
+					<label for="">Answer</label>
+					<input type="text" class="ans ans-box" />
+				</div>
+				<div class="result result-box resultThree"></div>
+			</div>
+			<!-- Start Quiz & Answer 3 -->
+		</div>
+		<!-- end quiz and answer -->
+
+		<!-- start timer box -->
+		<div class="timeBox">
+			<div class="timer">Time is: <span id="time"></span></div>
+			<div class="timer">
+				<span id="timeResult"></span>
+			</div>
+		</div>
+		<!-- end timer box -->
+
+		<div id="heart"></div>
+		<div class="gameStart gameStartThree" id="btn">
+			<button id="start">Start</button>
+
+		</div>
+
+	</div>
+	<h2 id="warning"></h2>
+
+	<!-- start audio file -->
+	<audio controls loop id="audio">
+		<source src="audio/quizSound.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="correct" src="./audio/correct.mp3"></audio>
+	<!-- end audio file -->
+</body>
+
+<script src="./js/game.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

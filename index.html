@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<embed lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/Introduction/rocket.png">
+    <link rel="stylesheet" href="./css/introduction.css">
+    <title>Launch Rocket</title>
+</head>
+
+<body>
+  <!-- start information -->
+  <div class="container">
+    <div class="dynamic-text">
+        <li>You have a mission to research Jupiter <img src="./images/Introduction/jupiter.png" alt=""> </li>
+        <li>Some scientists say that this Jupiter has aliens <img src="./images/Introduction/alien.png" alt="">
+        </li>
+        <li>Let's find aliens and connect. <img src="./images/Introduction/alien2.png" alt=""></li>
+    </div>
+</div>
+  <!-- end information -->
+</body>
+
+<!-- start animation -->
+<div class="animation">
+    <div class="jupiter">
+        <img src="./images/Introduction/jupiter.gif" alt="">
+    </div>
+    <div class="rocket">
+        <img id="rocket" src="./images/Introduction/rocket.png" alt="">
+    </div>
+    <div class="earth">
+        <img src="./images/Introduction/earth-png.gif" alt="">
+    </div>
+    <div id="startMain" onclick="startCountdown()" class="count-down">
+        <div id="count" class="count"></div>
+        <button id="startBtn" class="start" >
+            <div class="buttonOne">St</div>
+            <div class="rocketClick">
+                <img src="./images/Introduction/rocket.png" alt="">
+            </div>
+            <div class="buttonTwo">art</div>
+        </button>
+    </div>
+    <div id="next" class="next">
+        <a class="nextBtn" href="./jupiter2.html">Next</a>
+    </div>
+</div>
+<!-- end aimation -->
+
+<!-- start audio -->
+<audio controls loop autoplay id="audio">
+    <source src="audio/bgSound.mp3" type="audio/mpeg">
+</audio>
+<audio id="clickSound" src="./audio/rocket-launch.mp3"></audio>
+<!-- end audio -->
+<script src="./js/introduction.js"></script>
+
+</html>

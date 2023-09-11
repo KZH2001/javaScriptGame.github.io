@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/Introduction/galaxy.gif);
+  font-family: "Russo One", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+#audio {
+  display: none;
+}
+
+.dynamic-container {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+  background-color: black;
+}
+
+.dynamic {
+  position: relative;
+  color: white;
+}
+
+.dynamic-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border-left: 2px solid white;
+  animation: typing 4s steps(12) 8;
+}
+
+.jupter-img {
+  position: absolute;
+  opacity: 0;
+  width: 400px;
+  top: 260px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: showJupter 1.6s linear 1s forwards;
+}
+
+.rocket-img {
+  position: absolute;
+  opacity: 0;
+  width: 50px;
+  left: 50%;
+  margin-left: -22px;
+  transform: translateX(-50%);
+  top: 220px;
+  animation: landRocket 3s linear forwards;
+}
+
+.ufo-img {
+  position: absolute;
+  width: 40px;
+  left: 50%;
+  margin-left: 172px;
+  transform: translateX(-50%) rotate(15deg);
+  top: 120px;
+  animation: landUfo 3s ease-out 4s forwards;
+  opacity: 0;
+}
+
+.alien-img {
+  opacity: 0;
+  position: absolute;
+  width: 880px;
+  transform: translateX(-50%);
+  top: 238px;
+  left: 50%;
+  animation: showAlien 6s 8s linear;
+}
+
+#machineClick {
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  position: absolute;
+  opacity: 0;
+  animation: showText 1.2s linear 29s infinite;
+}
+
+.advancedMachine {
+  position: relative;
+  margin: auto;
+  top: 100px;
+  width: 1200px;
+  height: 500px;
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  opacity: 0;
+  background-color: black;
+  overflow: hidden;
+  animation: showBorder 2s linear 24s forwards;
+}
+
+#machine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#machine {
+  animation: dropMachine 3s linear forwards paused;
+}
+
+@keyframes showJupter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes landRocket {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(14px);
+    opacity: 1;
+  }
+}
+
+@keyframes landUfo {
+  from {
+    transform: translate(0) rotate(15deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-126px, 126px) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes showAlien {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes dropMachine {
+  from {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate(-50%, 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  0% {
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes showBorder {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    width: 200px;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.stickerOne img {
+    left: 10px;
+    position: fixed;
+    width: 50px;
+    top: 10px;
+    opacity: 0;
+    animation: show 2s linear 2s forwards;
+}
+
+.stickerTwo img {
+    left: 10px;
+    position: fixed;
+    width: 50px;
+    bottom: 0px;
+    opacity: 0;
+    animation: show 2s linear 4s forwards;
+}
+
+.stickerThree img {
+    right: 10px;
+    position: fixed;
+    width: 150px;
+    bottom: 0px;
+    opacity: 0;
+    animation: show 2s linear 6s forwards;
+}
+
+.stickerFour img {
+    right: 10px;
+    position: fixed;
+    width: 100px;
+    top: 0px;
+    opacity: 0;
+    animation: show 2s linear 8s forwards;
+}
+
+.stickerFive img {
+    position: fixed;
+    width: 70px;
+    opacity: 0;
+    z-index: -100;
+    top: 300px;
+    right: 200px;
+    animation: show 2s linear 10s forwards;
+}
+
+.stickerSix img {
+    position: fixed;
+    width: 180px;
+    opacity: 0;
+    z-index: -100;
+    left: 200px;
+    top: 300px;
+    animation: show 2s linear 12s forwards;
+}
+
+#audio {
+    display: none;
+}
+
+.container .gameTitle h1 {
+    font-size: 45px;
+    animation: toTop 17s linear;
+    margin-top: -1740px;
+}
+
+.teamName h1:first-child {
+    font-size: 35px;
+    margin-top: 35px;
+    animation: toTop 17s linear;
+}
+
+.teamName h1 {
+    font-size: 30px;
+    line-height: 40px;
+    animation: toTop 17s linear;
+}
+
+.gameName h1:first-child {
+    font-size: 35px;
+    margin-top: 35px;
+    animation: toTop 17s linear;
+}
+
+.gameName h1 {
+    font-size: 30px;
+    line-height: 40px;
+    animation: toTop 17s linear;
+}
+
+.editor h1:first-child {
+    font-size: 35px;
+    margin-top: 35px;
+    animation: toTop 17s linear;
+}
+
+.editor h1 {
+    font-size: 30px;
+    line-height: 40px;
+    animation: toTop 17s linear;
+}
+
+.End h1 {
+    font-size: 50px;
+    margin-top: 70vh;
+    animation: toTop 17s linear;
+}
+
+.teamMember h1:first-child {
+    font-size: 35px;
+    margin-top: 35px;
+    animation: toTop 17s linear;
+    margin-bottom: 15px;
+}
+
+.teamMember h1 {
+    font-size: 30px;
+    line-height: 40px;
+    animation: toTop 17s linear;
+}
+
+.soundTitle h1:first-child {
+    font-size: 35px;
+    animation: toTop 17s linear;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.soundTitle h1 {
+    animation: toTop 17s linear;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.gameImage h1:first-child {
+    font-size: 35px;
+    animation: toTop 17s linear;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.gameImage h1 {
+    animation: toTop 17s linear;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+#restartBtn {
+    position: absolute;
+    bottom: 20px;
+    width: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    background-color: greenyellow;
+    transition: .5s linear;
+    opacity: 0;
+    animation: showButton 1s linear 18s forwards;
+}
+
+#restartBtn:hover {
+    letter-spacing: 2px;
+    width: 180px;
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.712);
+    color: white;
+}
+
+.loveHand {
+    opacity: 0;
+    font-size: 60px;
+    animation: showButton 2s 18s linear forwards;
+}
+
+
+@keyframes toTop {
+    from {
+        transform: translateY(348vh);
+    }
+
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes showButton {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

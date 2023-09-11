@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/gameFour.css" />
+  <link rel="stylesheet" href="./css/gameOverAnimation.css">
+
+  <title>Level </title>
+</head>
+
+<body onload="boxStyles()">
+
+  <h1 id="playerName"></h1>
+  <div id="heart"></div>
+
+  <div id="myBtn" class="helpRobot">
+    <img src="./images/GameOne/robot.png" alt="" />
+  </div>
+
+  <!-- start modal box -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="guide-container">
+        <div class="game4Box">
+          <span class="textDescription">First, we use a key, such as "GERMAN", and the number of columns will be equal
+            to the key length (in this case we have six columns). </span>
+          <span class="textDescription">Let's start with a message of: <span id="point">"defend the east wall of the
+              castle"</span></span>
+          <br>
+
+          <div class="mainSample">
+            <div class="left">
+              <span class="textDescription textOne">We then write the message with the <span
+                  style="color: rgb(21, 241, 157);">key word in the first row:</span> </span>
+
+              <table style="width: 60%; text-align: center;color: white;  border-collapse: collapse; margin: auto;"
+                border="2px">
+                <tbody>
+                  <tr style="height: 23px; color: rgb(21, 241, 157);">
+                    <td style="width: 15%; height: 23px;">G</td>
+                    <td style="width: 15%; height: 23px;">E</td>
+                    <td style="width: 15%; height: 23px;">R</td>
+                    <td style="width: 15%; height: 23px;">M</td>
+                    <td style="width: 15%; height: 23px;">A</td>
+                    <td style="width: 15%; height: 23px;">N</td>
+                  </tr>
+                  <tr style="height: 21px;   color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">D</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">F</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">N</td>
+                    <td style="width: 15%; height: 21px;">D</td>
+                  </tr>
+                  <tr style="height: 21px;  color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">H</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">A</td>
+                    <td style="width: 15%; height: 21px;">S</td>
+                  </tr>
+                  <tr style="height: 21px;  color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">W</td>
+                    <td style="width: 15%; height: 21px;">A</td>
+                    <td style="width: 15%; height: 21px;">L</td>
+                    <td style="width: 15%; height: 21px;">L</td>
+                    <td style="width: 15%; height: 21px;">O</td>
+                  </tr>
+                  <tr style="height: 21px;  color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">F</td>
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">H</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">C</td>
+                    <td style="width: 15%; height: 21px;">A</td>
+                  </tr>
+                  <tr style="height: 22px;  color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 22px;">S</td>
+                    <td style="width: 15%; height: 22px;">T</td>
+                    <td style="width: 15%; height: 22px;">L</td>
+                    <td style="width: 15%; height: 22px;">E</td>
+                    <td style="width: 15%; height: 22px;"></td>
+                    <td style="width: 15%; height: 22px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+            <div class="right">
+              <span class="textDescription textOne">and then arrange alphabetically for the key word: </span>
+
+              <table style="width: 60%; text-align: center;color: white;  border-collapse: collapse;margin: auto;"
+                border="2px">
+                <tbody>
+                  <tr style="height: 23px; color: rgb(21, 241, 157);">
+                    <td style="width: 15%; height: 23px;">A</td>
+                    <td style="width: 15%; height: 23px;">E</td>
+                    <td style="width: 15%; height: 23px;">G</td>
+                    <td style="width: 15%; height: 23px;">M</td>
+                    <td style="width: 15%; height: 23px;">N</td>
+                    <td style="width: 15%; height: 23px;">R</td>
+                  </tr>
+                  <tr style="height: 21px;color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">N</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">D</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">D</td>
+                    <td style="width: 15%; height: 21px;">F</td>
+                  </tr>
+                  <tr style="height: 21px;color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">A</td>
+                    <td style="width: 15%; height: 21px;">H</td>
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">S</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                  </tr>
+                  <tr style="height: 21px;color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">L</td>
+                    <td style="width: 15%; height: 21px;">W</td>
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">L</td>
+                    <td style="width: 15%; height: 21px;">O</td>
+                    <td style="width: 15%; height: 21px;">A</td>
+                  </tr>
+                  <tr style="height: 21px;color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 21px;">C</td>
+                    <td style="width: 15%; height: 21px;">T</td>
+                    <td style="width: 15%; height: 21px;">F</td>
+                    <td style="width: 15%; height: 21px;">E</td>
+                    <td style="width: 15%; height: 21px;">A</td>
+                    <td style="width: 15%; height: 21px;">H</td>
+                  </tr>
+                  <tr style="height: 22px;color: rgb(17, 202, 226);">
+                    <td style="width: 15%; height: 22px;"></td>
+                    <td style="width: 15%; height: 22px;">T</td>
+                    <td style="width: 15%; height: 22px;">S</td>
+                    <td style="width: 15%; height: 22px;">E</td>
+                    <td style="width: 15%; height: 22px;"></td>
+                    <td style="width: 15%; height: 22px;">L</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+
+          <span class="textDescription textTwo">and then read the cipher from the columns down:
+            <span style="color: rgb(17, 202, 226);"> NALCEHWTTDTTFSEELEEDSOAFEAHL</span> </span>
+          <span class="textDescription textTwo">
+            The answer should be this <span style="color:rgb(17, 202, 226);">NALCEHWTTDTTFSEELEEDSOAFEAHL</span>
+
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- end modal box -->
+
+  <!-- Start Quiz Box -->
+  <div id="levelOne" class="level">
+    <div class="quizBody">
+
+      <!-- start question and answer 1 -->
+      <div class="header">
+        <div class="keyBox keyBoxOne gameOneQuestionOne">
+          <label for="">Key</label>
+          <div class="key key-box"></div>
+        </div>
+
+        <div class="questionBox gameOneQuestionOne">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerOne">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultOne"></div>
+      </div>
+      <!-- end question and answer 1 -->
+
+<!-- start question and answer 2 -->
+      <div class="header">
+        <div class="keyBox keyBoxTwo gameOneQuestionOne">
+          <label for="">Key</label>
+          <div class="key key-box"></div>
+        </div>
+        <div class="questionBox gameOneQuestionTwo">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerTwo">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultTwo"></div>
+      </div>
+      <!-- end question and answer 2 -->
+
+
+<!-- start question and answer 3 -->
+      <div class="header">
+        <div class="keyBox keyBoxThree gameOneQuestionOne">
+          <label for="">Key</label>
+          <div class="key key-box"></div>
+        </div>
+        <div class="questionBox gameOneQuestionThree">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerThree">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultThree"></div>
+      </div>
+      <!-- end queston and answer 3 -->
+
+    </div>
+    <div class="timeBox">
+      <div class="timer">Time is: <span id="time"></span></div>
+      <div class="timer">
+        <span id="timeResult"></span>
+      </div>
+    </div>
+    <div id="heart"></div>
+    <div class="gameStart" id="btn">
+      <button id="start">Start</button>
+    </div>
+    <div class="notePad">
+      <textarea placeholder="Note" name="" id="noteDown" ></textarea>
+    </div>
+  </div>
+  <!--End Quiz Box -->
+
+<!-- start audio file -->
+  <audio controls loop id="audio">
+    <source src="audio/quizSound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="correct" src="./audio/correct.mp3"></audio>
+  <!-- end audio file -->
+</body>
+<script src="./js/game.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</html>

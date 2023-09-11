@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Balthazar&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Balthazar', serif;
+}
+
+body {
+  background: url(../images/Login/galaxy.gif);
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#audio {
+  display: none;
+}
+
+.mainCard {
+  display: flex;
+  margin-left: 40px;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  animation: showBox 1s linear forwards;
+}
+
+.description {
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 0px solid rgba(255, 255, 255, 0.222);
+  width: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  animation: increaseSizeDe 1s linear 2s forwards, showBorder 1s linear 3s forwards
+}
+
+.info {
+  margin-left: 30px;
+  color: white;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.rule-box,
+.password-guide {
+  line-height: 25px;
+  margin-top: 5px;
+}
+
+.login-card {
+  width: 0px;
+  padding: 20px;
+  background-color: #466777;
+  animation: increaseSizeLo 1s linear 1.1s forwards;
+  margin-left: 130px;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 0);
+  transition: 2s linear;
+  color: white;
+  line-height: 100px;
+}
+
+.cover3 {
+  background-color: #466777;
+}
+
+.number1,
+.number2,
+.number3 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+}
+
+.password {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 2px solid rgba(255, 255, 255, 0.222);
+  color: rgb(255, 255, 255);
+  line-height: 90px;
+  font-size: 50px;
+}
+
+.check1:hover~.cover1 {
+  margin-top: 100px;
+  border: 1px solid white;
+}
+
+.check2:hover~.cover2 {
+  border: 1px solid white;
+  margin-left: 100px;
+}
+
+.check3:hover~.cover3 {
+  border: 1px solid white;
+  margin-left: 100px;
+}
+
+.check1:hover~.cover>.number1,
+.check2:hover~.cover>.number2,
+.check3:hover~.cover>.number3 {
+  animation: showHide 1s linear infinite;
+}
+
+.check1 {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  left: 0;
+  top: 0;
+}
+
+.check2 {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0);
+  bottom: 0;
+  right: 0;
+}
+
+.check3 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.password1 {
+  top: 0px;
+  right: 0px;
+}
+
+.password2 {
+  bottom: 0;
+  left: 0;
+}
+
+.password3 {
+  bottom: 0;
+  left: 0;
+}
+
+.cover1 {
+  right: 0;
+  top: 0;
+}
+
+.cover2 {
+  bottom: 0;
+  left: 0;
+}
+
+.cover3 {
+  left: 0;
+  bottom: 0;
+}
+
+.card-header .log {
+  margin: 0;
+  font-size: 24px;
+  color: black;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+#errorMessageName,
+#errorMessagePassword {
+  font-size: 20px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.submitBtn {
+  width: 20%;
+  background-color: #333;
+  color: white;
+  width: 60px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 1;
+  text-align: center;
+}
+
+.description {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ruleTitle {
+  opacity: 0;
+  animation: showText 2s linear 4s forwards;
+}
+
+.rule1 {
+  opacity: 0;
+  animation: showText 2s linear 5s forwards;
+}
+
+.rule2 {
+  opacity: 0;
+  animation: showText 2s linear 6s forwards;
+}
+
+.rule3 {
+  opacity: 0;
+  animation: showText 2s linear 7s forwards;
+}
+
+.rule4 {
+  opacity: 0;
+  animation: showText 2s linear 8s forwards;
+}
+
+.passTitle {
+  opacity: 0;
+  animation: showText 2s linear 10s forwards;
+}
+
+.pass1 {
+  opacity: 0;
+  animation: showText 2s linear 11s forwards;
+}
+
+.pass2 {
+  opacity: 0;
+  animation: showText 2s linear 12s forwards;
+}
+
+.pass3 {
+  opacity: 0;
+  animation: showText 2s linear 13s forwards;
+}
+
+.pass4 {
+  opacity: 0;
+  animation: showText 2s linear 14s forwards;
+}
+
+.pass5 {
+  opacity: 0;
+  animation: showText 2s linear 15s forwards;
+}
+
+#machineContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  cursor: pointer;
+  animation: dropMachine .5s linear;
+}
+
+.machine {
+  display: flex;
+  width: 300px;
+  justify-content: center;
+}
+
+.left img {
+  width: 305px;
+  animation: splitLeft 3s linear 1s forwards;
+}
+
+.right img {
+  width: 194px;
+  animation: splitRight 5s ease-out 1s forwards;
+}
+
+
+@keyframes increaseSizeLo {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    width: 300px;
+    height: 310px;
+    margin-left: 0px;
+  }
+}
+
+@keyframes dropMachine {
+  from {
+    transform: translate(-50%, -70vh);
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes splitLeft {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(-590px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-590px);
+    opacity: 0;
+  }
+}
+
+@keyframes splitRight {
+  from {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(590px);
+    opacity: 0;
+  }
+}
+
+@keyframes showBox {
+  0% {
+    opacity: 0;
+  }
+
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showBorder {
+  from {
+    border: 0px solid rgba(255, 255, 255, 0.222);
+  }
+
+  to {
+    border: 2px solid rgba(255, 255, 255, 0.222);
+  }
+}
+
+@keyframes showHide {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes increaseSizeDe {
+  from {
+    width: 0px;
+  }
+
+  to {
+    width: 450px;
+  }
+}

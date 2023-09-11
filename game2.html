@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/gameTwo.css" />
+  <link rel="stylesheet" href="./css/gameOverAnimation.css">
+  <title>Level 2</title>
+</head>
+
+<body onload="boxStyles()">
+  <h1 id="playerName"></h1>
+  <div id="heart"></div>
+
+  <div id="myBtn" class="helpRobot">
+    <img src="./images/GameOne/robot.png" alt="" />
+  </div>
+
+  <!-- start modal box -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="guide-container">
+
+        <div class="firstRow">
+          <div class="pigBoxOne">
+            <div class="vertical pigPenOne">
+              <span class="alph" id="a">A</span>
+              <span class="alph" id="d">D</span>
+              <span class="alph" id="g">G</span>
+              <span class="alph" id="b">B</span>
+              <span class="alph" id="e">E</span>
+              <span class="alph" id="h">H</span>
+              <span class="alph" id="c">C</span>
+              <span class="alph" id="f">F</span>
+              <span class="alph" id="i">I</span>
+            </div>
+
+            <div class="vertical pigPenTwo"></div>
+            <div class="horizonal pigPenThree"></div>
+            <div class="horizonal pigPenFour"></div>
+          </div>
+
+          <div class="pigBoxTwo">
+            <div class="vertical pigPenOne">
+              <span class="alph" id="j">J</span>
+              <span class="circle circle1"></span>
+
+              <span class="alph" id="k">K</span>
+              <span class="circle circle2"></span>
+
+              <span class="alph" id="l">L</span>
+              <span class="circle circle3"></span>
+
+              <span class="alph" id="m">M</span>
+              <span class="circle circle4"></span>
+
+              <span class="alph" id="n">N</span>
+              <span class="circle circle5"></span>
+
+              <span class="alph" id="o">O</span>
+              <span class="circle circle6"></span>
+
+              <span class="alph" id="p">P</span>
+              <span class="circle circle7"></span>
+
+              <span class="alph" id="q">Q</span>
+              <span class="circle circle8"></span>
+
+              <span class="alph" id="r">R</span>
+              <span class="circle circle9"></span>
+            </div>
+
+            <div class="vertical pigPenTwo"></div>
+            <div class="horizonal pigPenThree"></div>
+            <div class="horizonal pigPenFour"></div>
+          </div>
+        </div>
+
+        <div class="secondRow">
+          <div class="pigBoxThree">
+            <div class="diagonalOne">
+              <span class="alph" id="s">S</span>
+              <span class="alph" id="t">T</span>
+              <span class="alph" id="u">U</span>
+              <span class="alph" id="v">V</span>
+            </div>
+            <div class="diagonalTwo"></div>
+          </div>
+
+          <div class="pigBoxFour">
+            <div class="diagonalOne">
+              <span class="alph" id="w">W</span>
+              <span class="circle circle10"></span>
+
+              <span class="alph" id="x">X</span>
+              <span class="circle circle11"></span>
+
+              <span class="alph" id="y">Y</span>
+              <span class="circle circle12"></span>
+
+              <span class="alph" id="z">Z</span>
+              <span class="circle circle13"></span>
+
+            </div>
+            <div class="diagonalTwo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal box -->
+
+
+  <div id="levelOne" class="level">
+    <div class="quizBody">
+
+      <!-- Start Quiz & Answer 1 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionOne">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerOne">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultOne"></div>
+      </div>
+      <!-- End Quiz & Answer 1 -->
+
+      <!-- Start Quiz & Answer 2 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionTwo">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerTwo">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultTwo"></div>
+      </div>
+      <!-- End Quiz & Answer 2 -->
+
+       <!-- Start Quiz & Answer 3 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionThree">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerThree">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultThree"></div>
+      </div>
+       <!-- End Quiz & Answer 3 -->
+    </div>
+
+    <!-- start timer box -->
+    <div class="timeBox">
+      <div class="timer">Time is: <span id="time"></span></div>
+      <div class="timer">
+        <span id="timeResult"></span>
+      </div>
+    </div>
+    <!-- end timer box -->
+
+    <div id="heart"></div>
+    <div class="gameStart gameStartTwo" id="btn">
+      <button id="start">Start</button>
+    </div>
+  </div>
+
+  <!-- start audio File -->
+  <audio controls loop id="audio">
+    <source src="audio/quizSound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="correct" src="./audio/correct.mp3"></audio>
+  <!-- end audio file -->
+
+</body>
+<script src="./js/game.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+</html>

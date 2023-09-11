@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/gameOne.css" />
+  <link rel="stylesheet" href="./css/gameOverAnimation.css">
+  <title>Level 1</title>
+</head>
+
+<body onload="boxStyles()">
+
+  <!-- start Introduction -->
+  <div class="dynamic-container">
+    <span id="dynamic" class="dynamic dynamic-text"> </span>
+  </div>
+  <!-- end Introduction -->
+
+  <h1 id="playerName"></h1>
+  <div id="heart"></div>
+  <div id="myBtn" class="helpRobot">
+    <img src="./images/GameOne/robot.png" alt="" />
+  </div>
+
+  <!-- start modal box -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="guide-container">
+        <div class="row row1">
+          <div class="box box1"></div>
+          <div class="box box2">A</div>
+          <div class="box box3">D</div>
+          <div class="box box4">F</div>
+          <div class="box box5">G</div>
+          <div class="box box6">V</div>
+          <div class="box box7">X</div>
+        </div>
+
+        <div class="row row2">
+          <div class="box box1">A</div>
+          <div class="box box2">8</div>
+          <div class="box box3">p</div>
+          <div class="box box4">3</div>
+          <div class="box box5">d</div>
+          <div class="box box6">1</div>
+          <div class="box box7">n</div>
+        </div>
+
+        <div class="row row3">
+          <div class="box box1">D</div>
+          <div class="box box2">l</div>
+          <div class="box box3">t</div>
+          <div class="box box4">4</div>
+          <div class="box box5">o</div>
+          <div class="box box6">a</div>
+          <div class="box box7">h</div>
+        </div>
+
+        <div class="row row4">
+          <div class="box box1">F</div>
+          <div class="box box2">7</div>
+          <div class="box box3">k</div>
+          <div class="box box4">b</div>
+          <div class="box box5">c</div>
+          <div class="box box6">5</div>
+          <div class="box box7">z</div>
+        </div>
+
+        <div class="row row5">
+          <div class="box box1">G</div>
+          <div class="box box2">j</div>
+          <div class="box box3">u</div>
+          <div class="box box4">6</div>
+          <div class="box box5">w</div>
+          <div class="box box6">g</div>
+          <div class="box box7">m</div>
+        </div>
+
+        <div class="row row6">
+          <div class="box box1">V</div>
+          <div class="box box2">x</div>
+          <div class="box box3">s</div>
+          <div class="box box4">v</div>
+          <div class="box box5">i</div>
+          <div class="box box6">r</div>
+          <div class="box box7">2</div>
+        </div>
+
+        <div class="row row7">
+          <div class="box box1">X</div>
+          <div class="box box2">9</div>
+          <div class="box box3">e</div>
+          <div class="box box4">y</div>
+          <div class="box box5">0</div>
+          <div class="box box6">f</div>
+          <div class="box box7">q</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal box -->
+
+  <!-- start questions and answer -->
+  <div id="levelOne" class="level">
+    <div class="quizBody">
+
+       <!-- Start Quiz & Answer 1 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionOne">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerOne">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultOne"></div>
+      </div>
+      <!-- End Quiz & Answer 1 -->
+
+      <!-- Start Quiz & Answer 2 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionTwo">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerTwo">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultTwo"></div>
+      </div>
+       <!-- End Quiz & Answer 2 -->
+
+       <!-- Start Quiz & Answer 3 -->
+      <div class="header">
+        <div class="questionBox gameOneQuestionThree">
+          <label for="">Question</label>
+          <div class="ques ques-box"></div>
+        </div>
+        <div class="answerBox gameOneAnswerThree">
+          <label for="">Answer</label>
+          <input type="text" class="ans ans-box" />
+        </div>
+        <div class="result result-box resultThree"></div>
+      </div>
+       <!-- End Quiz & Answer 3 -->
+    </div>
+
+    <!-- start Timer  -->
+    <div class="timeBox">
+      <div class="timer">Time is: <span id="time"></span></div>
+      <div class="timer">
+        <span id="timeResult"></span>
+      </div>
+    </div>
+    <!-- end Timer -->
+    
+    <div id="heart"></div>
+    <div class="gameStart gameStartOne" id="btn">
+      <button id="start">Start</button>
+    </div>
+  </div>
+  <!-- end questions and answer -->
+
+<!-- start audio -->
+<audio id="correct" src="./audio/correct.mp3"></audio>
+<audio controls loop id="audio">
+  <source src="audio/quizSound.mp3" type="audio/mpeg">
+</audio>
+<!-- end audio -->
+</body>
+
+
+<script src="./js/game.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

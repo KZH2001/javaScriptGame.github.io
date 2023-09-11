@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(../images/Introduction/galaxy.gif);
+  font-family: "Russo One", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+}
+
+#audio {
+  display: none;
+}
+
+#playerName {
+  color: white;
+  font-size: 18px;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 30px;
+  opacity: 0;
+  animation: showText linear 1s .5s forwards;
+  margin-top: 25px;
+}
+
+.helpRobot img {
+  width: 80px;
+  position: fixed;
+  bottom: 40px;
+  left: 40px;
+  cursor: pointer;
+  opacity: 0;
+  animation: beat 1s linear infinite, showText linear 2s 1.5s forwards;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-top: -80px;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 55%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(235, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.guide-container {
+  opacity: 0.;
+  position: relative;
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.guide-container::before {
+  content: "";
+  background-image: url(../images/GameOne/jupiter.png);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.box {
+  text-align: center;
+  line-height: 30px;
+  margin-left: 10px;
+  width: 70px;
+  color: white;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .5s linear;
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+}
+
+.box:hover {
+  transform: scale(1.6);
+  color: rgb(14, 152, 165);
+  position: relative;
+}
+
+#heart {
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  font-size: 20px;
+  animation: showText linear 2s 1s forwards;
+  opacity: 0;
+}
+
+.header {
+  color: rgb(38, 61, 194);
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.life {
+  font-size: larger;
+  width: 30px;
+  height: 30px;
+  color: red;
+}
+
+.ques-box,
+.ans-box {
+  width: 260px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  line-height: 35px;
+  border-radius: 7px;
+  border: 1px solid white;
+}
+
+.ans {
+  display: block;
+}
+
+.answerBox {
+  margin-left: 20px;
+}
+
+.quizBody {
+  margin-top: 100px;
+  opacity: 1;
+}
+
+.timeBox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  animation: showText linear 2s 1.2s forwards;
+  opacity: 0;
+}
+
+#time,
+.timer {
+  color: white;
+  height: 30px;
+  margin: 10px;
+}
+
+.gameStart {
+  display: flex;
+  justify-content: center;
+}
+
+#start,
+#next {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 60px;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#correct {
+  display: none;
+}
+
+.result-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 19.3px;
+  background-color: #2c2c54;
+  margin-left: 20px;
+  border: 1px solid white;
+}
+
+.game3Container {
+  margin-top: -100px;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.alphaBox {
+  position: relative;
+  left: 0;
+  top: 10px;
+  display: flex;
+}
+
+.alphaBox1 {
+  position: relative;
+  left: 0;
+  top: 90px;
+  display: flex;
+}
+
+.alphaBox2 {
+  position: relative;
+  left: 0;
+  top: 170px;
+  display: flex;
+}
+
+.alphaBox3 {
+  position: relative;
+  left: 0;
+  top: 250px;
+  display: flex;
+}
+
+.alphaBox4 {
+  position: relative;
+  left: 0;
+  top: 320px;
+  display: flex;
+}
+
+#gA,
+#gD {
+  font-family: 'Rubik Wet Paint', cursive;
+  font-size: 60px;
+  color: rgba(245, 149, 6, 0.473);
+}
+
+#gA {
+  color: rgb(245, 149, 6);
+}
+
+#gA:hover,
+#gD:hover {
+  color: rgb(245, 149, 6);
+  cursor: pointer;
+}
+
+#gD {
+  left: 0;
+  position: absolute;
+}
+
+#gA {
+  right: 0;
+  position: absolute;
+}
+
+.arrow {
+  position: absolute;
+  margin-top: 33px;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  transform: rotate(270deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 5px solid rgb(245, 149, 6);
+  border-right: 5px solid rgba(245, 149, 6, 0.973);
+  transform: rotate(25deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+#warning {
+  color: rgb(255, 0, 0);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.gameOneQuestionOne {
+  opacity: 0;
+  animation: showQuestion 2s 3s linear forwards;
+}
+
+.gameOneAnswerOne {
+  opacity: 0;
+  animation: showAnswer 2s 3s linear forwards;
+}
+
+.gameOneQuestionTwo {
+  opacity: 0;
+  animation: showQuestion 2s 4s linear forwards;
+}
+
+.gameOneAnswerTwo {
+  opacity: 0;
+  animation: showAnswer 2s 4s linear forwards;
+}
+
+.gameOneQuestionThree {
+  opacity: 0;
+  animation: showQuestion 2s 5s linear forwards;
+}
+
+.gameOneAnswerThree {
+  opacity: 0;
+  animation: showAnswer 2s 5s linear forwards;
+}
+
+.resultOne {
+  opacity: 0;
+  animation: showText 2s 6s linear forwards;
+}
+
+.resultTwo {
+  opacity: 0;
+  animation: showText 2s 7s linear forwards;
+}
+
+.resultThree {
+  opacity: 0;
+  animation: showText 2s 8s linear forwards;
+}
+
+.gameStart {
+  display: none;
+  text-align: center;
+}
+
+#restart {
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #227093;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: block;
+  margin: auto;
+  position: relative;
+  top: 80vh;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+@keyframes hideText {
+  from {
+    border-left: 2px solid white;
+  }
+
+  to {
+    border-left: 0px solid white;
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes showQuestion {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showAnswer {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
